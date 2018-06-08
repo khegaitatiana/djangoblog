@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+# script that helps to manage the website.
+# run server: py manage.py runserver
+# create application: py manage.py startapp blog    (blog - is name of app, after running command - new folder is created with structure)
+# create migration file to apply changes in db: py manage.py makemigrations blog (blog - is name of app)
+# apply db changes: py manage.py migrate blog (blog - is name of app)
+# create superuser: py manage.py createsuperuse
+# console django: py manage.py shell
+
 import os
 import sys
 

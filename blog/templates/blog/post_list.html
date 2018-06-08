@@ -1,13 +1,13 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/base.html' %}      <!-- extend template base.html -->
 
-{% block content %}
-    {% for post in posts %}
+{% block content %}     <!-- in the place of base.html template with empty block content, set the following content -->
+    {% for post in posts %}     <!-- 'posts' object was sent via views in 'post_list' method -->
     <div class="post">
         <div class="date">
             <p>Published: {{ post.published_date }}</p>
         </div>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>      <!-- django: call URL with name 'post_detail' and pass the parameter pk (post primary key) -->
+        <p>{{ post.text|linebreaksbr }}</p>     <!-- convert line-breaks into paragraphs  -->
     </div>
     {% endfor %}
 {% endblock %}

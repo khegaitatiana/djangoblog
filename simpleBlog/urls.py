@@ -12,11 +12,18 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+
+^ — beginning of text;
+$ — ending of text;
+\d — number;
++ — last element should be repeated at least once
+() — get part of template
+
 """
 from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'', include('blog.urls')),
+    url(r'^admin/', admin.site.urls),   #URL starts with admin/, open administration page
+    url(r'', include('blog.urls')),     #empty URL, redirect to blog urls list
 ]
