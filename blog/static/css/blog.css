@@ -38,10 +38,11 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #ff9400;
     float: right;
-    font-size: 26pt;
+    font-size: 15pt;
     margin-right: 20px;
+    margin-top: 25px;
 }
 
 .post {
