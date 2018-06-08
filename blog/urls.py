@@ -21,5 +21,9 @@ urlpatterns = [
 
     #regex: start with 'post/edit/',then primary key that should be at least one number, / and end($ - end)
     #in views - post_edit method with name 'post_edit'
-    url(r'^post/edit/(?P<pk>\d+)/$', views.post_edit, name='post_edit')
+    url(r'^post/edit/(?P<pk>\d+)/$', views.post_edit, name='post_edit'),
+
+    url(r'^drafts/$', views.post_draft_list, name='post_draft_list'),
+    url(r'^post/publish/(?P<pk>\d+)/$', views.post_publish, name='post_publish'),
+    url(r'^post/delete/(?P<pk>\d+)/$', views.post_delete, name='post_delete')
 ]

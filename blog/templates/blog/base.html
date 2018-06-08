@@ -15,6 +15,7 @@
     <h1><a href="/">Django Simple Blog</a></h1>
     {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>      <!-- django: call URL with name 'post_new'. All urls are listed in urls.py -->
+        <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>       <!-- django: call URL with name 'post_draft_list'. All urls are listed in urls.py -->
     {% endif %}
 </div>
 

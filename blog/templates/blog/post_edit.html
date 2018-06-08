@@ -2,8 +2,8 @@
 
 {% block content %}     <!-- in the place of base.html template with empty block content, set the following content -->
     <h1>New post</h1>
-    <form method="post" class="post-form">{% csrf_token %}      <!--  -->
-        {{ form.as_p }}     <!--  -->
+    <form method="post" class="post-form">{% csrf_token %}      <!-- secure form -->
+        {{ form.as_p }}     <!-- display form -->
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}
